@@ -1,0 +1,9 @@
+.language-flag {
+  box-sizing: content-box;
+  width: 45px;
+  height: 28px;
+
+  &.selected {
+    border: 2px solid red;
+  }
+}

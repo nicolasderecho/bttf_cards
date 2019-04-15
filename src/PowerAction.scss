@@ -1,0 +1,36 @@
+$powerActionDark:  #7f1a5e;
+$powerActionLight: #bc6f9b;
+$powerActionBlack: #1e191d;
+$powerActionWhite: #d7d3d2;
+
+.bttf-card {
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &.power-action {
+    background-color: $powerActionLight;
+    color: $powerActionBlack;
+    min-height: 270px;
+    .bttf-card-header {
+      padding: 10px;
+    }
+
+    .bttf-card-body {
+      border-top: 2px solid $powerActionWhite;
+      border-bottom: 2px solid $powerActionWhite;
+      background-color: $powerActionDark;
+      color: $powerActionWhite;
+      padding: 15px;
+    }
+
+    .bttf-card-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+  }
+}
