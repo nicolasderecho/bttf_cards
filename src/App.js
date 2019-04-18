@@ -4,8 +4,7 @@ import flagArgentina from './assets/flag-arg.png';
 import flagUsa from './assets/flag-us.png';
 import Language from "./Language";
 import { LANGUAGES, LanguageContext } from './Languages';
-import {GAME_CARDS} from "./GameCards";
-import {REWIND} from "./GameCardContents";
+import {englishGameCards, spanishGameCards} from "./GameCards";
 
 class App extends Component {
   constructor(props) {
@@ -14,10 +13,9 @@ class App extends Component {
       this.setState( { language: language });
     };
     this.state = { language: LANGUAGES.ENGLISH, changeLanguage: this.changeLanguage };
-    const card = { type: 'power-action', id: 'rewind', title: 'Rewind', description: 'Remove any card(other than a power action) from the discard pile and immediately play it.', note: 'Anyone may look at the discard pile at any time', language: LANGUAGES.ENGLISH };
     this.cardsByLanguage = {
-        [`${LANGUAGES.ENGLISH}`]: [GAME_CARDS[LANGUAGES.ENGLISH][REWIND]],
-        [`${LANGUAGES.SPANISH}`]: [GAME_CARDS[LANGUAGES.SPANISH][REWIND]],
+        [`${LANGUAGES.ENGLISH}`]: englishGameCards(),
+        [`${LANGUAGES.SPANISH}`]: spanishGameCards(),
     };
   }
 
@@ -36,12 +34,10 @@ class App extends Component {
                 </header>
                 <div className={'header-cover'}></div>
                 <div className={'container app-body'}>
-                    <div className={'columns'}>
-                        {
-                            cards.map((card) => <div className={'column is-one-fifth-desktop is-one-quarter-tablet is-full-mobile'}>
-                                <PowerAction card={card} />
-                            </div>)
-                        }
+                    <div className={'columns is-multiline'}>
+                        {cards.map((card) => <div className={'column is-one-fifth-desktop is-one-quarter-tablet'} key={card.id}>
+                            <PowerAction card={card}/>
+                        </div>)}
                     </div>
                 </div>
             </div>
