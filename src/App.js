@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import PowerAction from "./PowerAction";
+import PowerAction from "./GameCardTypes/PowerAction";
 import flagArgentina from './assets/flag-arg.png';
 import flagUsa from './assets/flag-us.png';
 import Language from "./Language";
 import { LANGUAGES, LanguageContext } from './Languages';
-import {englishGameCards, spanishGameCards} from "./GameCards";
+import {englishGameCards, spanishGameCards} from "./GameCardDefinitions";
+import {gameCardFor} from "./GameCards";
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +20,17 @@ class App extends Component {
     };
   }
 
+  renderGameCard = (card) => {
+      const GameCard = gameCardFor(card);
+      return <div className={'column is-one-fifth-desktop is-one-quarter-tablet'} key={card.id}>
+          <GameCard card={card}/>
+      </div>
+  };
+
   render() {
     const cards = this.cardsByLanguage[this.state.language];
+    const renderGameCard = this.renderGameCard;
+
     return (
         <LanguageContext.Provider value={this.state}>
             <div className="App">
@@ -35,9 +45,7 @@ class App extends Component {
                 <div className={'header-cover'}></div>
                 <div className={'container app-body'}>
                     <div className={'columns is-multiline'}>
-                        {cards.map((card) => <div className={'column is-one-fifth-desktop is-one-quarter-tablet'} key={card.id}>
-                            <PowerAction card={card}/>
-                        </div>)}
+                        { cards.map(renderGameCard) }
                     </div>
                 </div>
             </div>
