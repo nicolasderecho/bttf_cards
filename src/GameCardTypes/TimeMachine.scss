@@ -1,0 +1,35 @@
+$timeMachineDark:  #191219;
+$timeMachineLight: #4e4e4e;
+$timeMachineWhite: #e8e9ee;
+
+.bttf-card {
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &.time-machine {
+    background-color: $timeMachineLight;
+    color: $timeMachineWhite;
+    min-height: 270px;
+    .bttf-card-header {
+      padding: 10px;
+    }
+
+    .bttf-card-body {
+      border-top: 2px solid $timeMachineWhite;
+      border-bottom: 2px solid $timeMachineWhite;
+      background-color: $timeMachineDark;
+      color: $timeMachineWhite;
+      padding: 15px;
+    }
+
+    .bttf-card-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+  }
+}

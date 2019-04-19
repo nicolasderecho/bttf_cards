@@ -36,7 +36,6 @@ export const GAME_CARDS = {
         [`${TIME_MACHINE_V6}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V6, title: 'Time car V6', subtitle: 'fully-equipped', description: 'play an extra card after you play this card.', language: LANGUAGES.ENGLISH },
 
         [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'First, flip the A-3 linchpin to whichever side you prefer', secondAction: 'Second, if you have the METAL PIE PAN on the table in front of you, then you may discard it to flip any other linchpin.', language: LANGUAGES.ENGLISH },
-        //[`${GULLIBLE_MCFLY}`]: { type: ACTION, id: GULLIBLE_MCFLY, title: '', description: '', language: LANGUAGES.ENGLISH }
 
         [`${OVERLOCOMOTIVE}`]: { type: ITEM, id: OVERLOCOMOTIVE, title: 'Overpowered locomotive', description: 'Discard this after using to activate the V5 time car', language: LANGUAGES.ENGLISH },
         [`${TOMORROW_NEWSPAPER}`]: { type: ITEM, id: TOMORROW_NEWSPAPER, title: 'Tomorrow\'s newspaper', description: 'If you have this on the table, you may discard it at any time to cancel another player\'s card', language: LANGUAGES.ENGLISH },

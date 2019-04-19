@@ -1,0 +1,36 @@
+$doubleBackDark:  #f3e717;
+$doubleBackLight: #fcfb6f;
+$doubleBackBlack: #1b1a16;
+$doubleBackWhite: #fafafa;
+
+.bttf-card {
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &.double-back {
+    background-color: $doubleBackLight;
+    color: $doubleBackBlack;
+    min-height: 270px;
+    .bttf-card-header {
+      padding: 10px;
+    }
+
+    .bttf-card-body {
+      border-top: 2px solid $doubleBackWhite;
+      border-bottom: 2px solid $doubleBackWhite;
+      background-color: $doubleBackDark;
+      color: $doubleBackBlack;
+      padding: 15px;
+    }
+
+    .bttf-card-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+  }
+}

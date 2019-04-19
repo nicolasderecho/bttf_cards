@@ -1,0 +1,36 @@
+$actionDark:  #148888;
+$actionLight: #8cc8d3;
+$actionBlack: #0c050c;
+$actionWhite: #e7f0ed;
+
+.bttf-card {
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &.action {
+    background-color: $actionLight;
+    color: $actionBlack;
+    min-height: 270px;
+    .bttf-card-header {
+      padding: 10px;
+    }
+
+    .bttf-card-body {
+      border-top: 2px solid $actionWhite;
+      border-bottom: 2px solid $actionWhite;
+      background-color: $actionDark;
+      color: $actionWhite;
+      padding: 15px;
+    }
+
+    .bttf-card-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+  }
+}
