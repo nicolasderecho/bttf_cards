@@ -1,5 +1,5 @@
 import {LANGUAGES} from "./Languages";
-import {REWIND, ENGINE_TROUBLE, LOOK_OUT_FOR_THAT_MANURE, LUCKY_DAY, MEMO_FROM_YOUR_FUTURE_YOURSELF, QUICK_TRIP_INTO_THE_FUTURE, SCIENCE_EXPERIMENT, YOU_STEAL_MY_STUFF, GULLIBLE_MCFLY, SLEEP_INDUCING_GENERATOR, TRADE_HANDS, SAVE_CLOCK_TOWER, TIME_VORTEX, HITCH_RIDE, DISCONTINUITY, NOT_YOURSELF_TODAY, SHOPPING_SPREE, ERASED_FROM_EXISTENCE, FADING_AWAY, TIME_MACHINE_V1, TIME_MACHINE_V2, TIME_MACHINE_V3, TIME_MACHINE_V4, TIME_MACHINE_V5, TIME_MACHINE_V6, DOUBLE_BACK_A3} from "./GameCardContents";
+import {REWIND, ENGINE_TROUBLE, LOOK_OUT_FOR_THAT_MANURE, LUCKY_DAY, MEMO_FROM_YOUR_FUTURE_YOURSELF, QUICK_TRIP_INTO_THE_FUTURE, SCIENCE_EXPERIMENT, YOU_STEAL_MY_STUFF, GULLIBLE_MCFLY, SLEEP_INDUCING_GENERATOR, TRADE_HANDS, SAVE_CLOCK_TOWER, TIME_VORTEX, HITCH_RIDE, DISCONTINUITY, NOT_YOURSELF_TODAY, SHOPPING_SPREE, ERASED_FROM_EXISTENCE, FADING_AWAY, TIME_MACHINE_V1, TIME_MACHINE_V2, TIME_MACHINE_V3, TIME_MACHINE_V4, TIME_MACHINE_V5, TIME_MACHINE_V6, DOUBLE_BACK_A3, OVERLOCOMOTIVE, TOMORROW_NEWSPAPER, FAX_FUTURE, LIGHTNING_PREDICTION, PELLET_PLUTONIUM, SPORTS_ALMANAC, DUST_JACKET_SPORTS_ALMANAC, MR_FUSION, EMERGENCY_CASH, CASE_OF_PLUTONIUM, TELEGRAM, PIZZA_HYDRATOR} from "./GameCardContents";
 import {POWER_ACTION, ACTION, ITEM, TIME_MACHINE, DOUBLE_BACK} from "./GameCardTypes";
 import {values} from 'lodash';
 
@@ -35,8 +35,21 @@ export const GAME_CARDS = {
         [`${TIME_MACHINE_V5}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V5, title: 'Time car V5', requires: 'locomotion', description: 'This card does nothing unless you also have an overpowered locomotive on the table', language: LANGUAGES.ENGLISH },
         [`${TIME_MACHINE_V6}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V6, title: 'Time car V6', subtitle: 'fully-equipped', description: 'play an extra card after you play this card.', language: LANGUAGES.ENGLISH },
 
-        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'First, flip the A-3 linchpin to whichever side you prefer', secondAction: 'Second, if you have the METAL PIE PAN on the table in front of you, then you may discard it to flip any other linchpin.', language: LANGUAGES.ENGLISH }
+        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'First, flip the A-3 linchpin to whichever side you prefer', secondAction: 'Second, if you have the METAL PIE PAN on the table in front of you, then you may discard it to flip any other linchpin.', language: LANGUAGES.ENGLISH },
         //[`${GULLIBLE_MCFLY}`]: { type: ACTION, id: GULLIBLE_MCFLY, title: '', description: '', language: LANGUAGES.ENGLISH }
+
+        [`${OVERLOCOMOTIVE}`]: { type: ITEM, id: OVERLOCOMOTIVE, title: 'Overpowered locomotive', description: 'Discard this after using to activate the V5 time car', language: LANGUAGES.ENGLISH },
+        [`${TOMORROW_NEWSPAPER}`]: { type: ITEM, id: TOMORROW_NEWSPAPER, title: 'Tomorrow\'s newspaper', description: 'If you have this on the table, you may discard it at any time to cancel another player\'s card', language: LANGUAGES.ENGLISH },
+        [`${FAX_FUTURE}`]: { type: ITEM, id: FAX_FUTURE, title: 'Fax from the future', description: 'If you have this on the table, you may discard it at any time to cancel another player\'s card', language: LANGUAGES.ENGLISH },
+        [`${LIGHTNING_PREDICTION}`]: { type: ITEM, id: LIGHTNING_PREDICTION, title: 'Lightning prediction', subtitle: 'Discard this after using to activate the V2 time car', description: 'If you have this on the table, you may discard it, as a free play, to make all users give you a card.', language: LANGUAGES.ENGLISH },
+        [`${PELLET_PLUTONIUM}`]: { type: ITEM, id: PELLET_PLUTONIUM, title: 'Pellet of plutonium', description: 'Discard this after using to activate the V1 time car', language: LANGUAGES.ENGLISH },
+        [`${SPORTS_ALMANAC}`]: { type: ITEM, id: SPORTS_ALMANAC, title: 'Gray\'s sports almanac', description: 'If you have this on the table, only you may change History at timeline event B-2', language: LANGUAGES.ENGLISH },
+        [`${DUST_JACKET_SPORTS_ALMANAC}`]: { type: ITEM, id: DUST_JACKET_SPORTS_ALMANAC, title: 'The dust jacket from Gray\'s sports almanac', description: 'If you have this on the table, you may discard it during your turn to steal the actual almanac.', language: LANGUAGES.ENGLISH },
+        [`${MR_FUSION}`]: { type: ITEM, id: MR_FUSION, title: 'Mr. Fusion', description: 'Once per turn, if you have this on the table, you may discard any other item you have on the table and draw 2 cards.', language: LANGUAGES.ENGLISH },
+        [`${EMERGENCY_CASH}`]: { type: ITEM, id: EMERGENCY_CASH, title: 'Emergency cash', description: 'If you have this on the table, you can substitute it for the item listed on any Doubleback.', language: LANGUAGES.ENGLISH },
+        [`${CASE_OF_PLUTONIUM}`]: { type: ITEM, id: CASE_OF_PLUTONIUM, title: 'Case of plutonium', description: 'After using this to activate the V1 Time car, put the car back in your hand and keep this on the table.', language: LANGUAGES.ENGLISH },
+        [`${TELEGRAM}`]: { type: ITEM, id: TELEGRAM, title: 'Telegram', subtitle: 'From a future friend trapped in the past', description: 'If you have this on the table, you may discard it at any time to cancel another player\'s card.', language: LANGUAGES.ENGLISH },
+        [`${PIZZA_HYDRATOR}`]: { type: ITEM, id: PIZZA_HYDRATOR, title: 'Pizza Hydrator', description: 'If you had this on the table during your previous turn, you may discard it, instead of playing a card, to draw 5 cards.', language: LANGUAGES.ENGLISH },
 
     },
 
@@ -72,7 +85,20 @@ export const GAME_CARDS = {
         [`${TIME_MACHINE_V5}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V5, title: 'Delorean V5', requires: 'la locomotora', description: 'Esta carta no hace nada a menos que también tengas una locomotora en la mesa.', language: LANGUAGES.SPANISH },
         [`${TIME_MACHINE_V6}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V6, title: 'Tren máquina del tiempo', subtitle: 'totalmente equipado', description: 'juega una carta extra luego de jugar esta carta.', language: LANGUAGES.SPANISH },
 
-        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'Primero, voltea el linchpin A-3 a la posición que quieras', secondAction: 'Luego, si tenes el item METAL PIE PAN en la mesa enfrente tuyo, podrías descartarlo para voltear cualquier otro linchpin.', language: LANGUAGES.SPANISH }
+        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'Primero, voltea el linchpin A-3 a la posición que quieras', secondAction: 'Luego, si tenes el item METAL PIE PAN en la mesa enfrente tuyo, podrías descartarlo para voltear cualquier otro linchpin.', language: LANGUAGES.SPANISH },
+
+        [`${OVERLOCOMOTIVE}`]: { type: ITEM, id: OVERLOCOMOTIVE, title: 'Locomotora', description: 'Descartala luego de usarla para activar el delorean V5', language: LANGUAGES.SPANISH },
+        [`${TOMORROW_NEWSPAPER}`]: { type: ITEM, id: TOMORROW_NEWSPAPER, title: 'Diario de mañana', description: 'Si tenés esto en la mesa, podés descartarlo en cualquier momento para anular la carta de otro jugador.', language: LANGUAGES.SPANISH },
+        [`${FAX_FUTURE}`]: { type: ITEM, id: FAX_FUTURE, title: 'Fax del futuro', description: 'Si tenés esto en la mesa, podés descartarlo en cualquier momento para cancelar la carta de otro jugador.', language: LANGUAGES.SPANISH },
+        [`${LIGHTNING_PREDICTION}`]: { type: ITEM, id: LIGHTNING_PREDICTION, title: 'Predicción del rayo', subtitle: 'Descartala luego de usarla para activar el delorean V2', description: 'Si tenés esto en la mesa, podés descartarlo, como jugada gratis, para hacer que todos los jugadores te den una carta.', language: LANGUAGES.SPANISH },
+        [`${PELLET_PLUTONIUM}`]: { type: ITEM, id: PELLET_PLUTONIUM, title: 'Tubo de plutonio', description: 'Descartala luego de usarla para activar el delorean V1', language: LANGUAGES.SPANISH },
+        [`${SPORTS_ALMANAC}`]: { type: ITEM, id: SPORTS_ALMANAC, title: 'Almanaque de deportes', description: 'Si tienes esto en la mesa, solo tu puedes cambiar la linea de tiempo del evento B-2', language: LANGUAGES.SPANISH },
+        [`${DUST_JACKET_SPORTS_ALMANAC}`]: { type: ITEM, id: DUST_JACKET_SPORTS_ALMANAC, title: 'Cubierta del almanaque de deportes', description: 'Si tenés esto en la mesa, podés descartarlo durante tu turno para robar el verdadero almanaque.', language: LANGUAGES.SPANISH },
+        [`${MR_FUSION}`]: { type: ITEM, id: MR_FUSION, title: 'Sr. Fusión', description: 'Una vez por turno, si tenés esto en la mesa, podés descartar otro item que tengas en la mesa y tomar 2 cartas del mazo.', language: LANGUAGES.SPANISH },
+        [`${EMERGENCY_CASH}`]: { type: ITEM, id: EMERGENCY_CASH, title: 'Dinero de emergencia', description: 'Si tenés esto en la mesa, podés usarlo para substituir cualquier item requerido en cualquier doubleback.', language: LANGUAGES.SPANISH },
+        [`${CASE_OF_PLUTONIUM}`]: { type: ITEM, id: CASE_OF_PLUTONIUM, title: 'Caja de plutonio', description: 'Después de usarlo para activar el delorean V1, guarda el delorean en tu mano y deja este item en la mesa.', language: LANGUAGES.SPANISH },
+        [`${TELEGRAM}`]: { type: ITEM, id: TELEGRAM, title: 'Telegrama', subtitle: 'De un amigo del futuro atrapado en el pasado.', description: 'Si tenés esto en la mesa, podés descartarlo en cualquier momento para cancelar la carta de otro jugador.', language: LANGUAGES.SPANISH },
+        [`${PIZZA_HYDRATOR}`]: { type: ITEM, id: PIZZA_HYDRATOR, title: 'Hidratador de pizza', description: 'si tuviste esta carta en la mesa durante el turno anterior, podrías descartarla, en lugar de jugar una carta, para tomar 5 cartas.', language: LANGUAGES.SPANISH }
 
     }
 
