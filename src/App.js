@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PowerAction from "./GameCardTypes/PowerAction";
 import flagArgentina from './assets/flag-arg.png';
 import flagUsa from './assets/flag-us.png';
 import Language from "./Language";

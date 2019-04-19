@@ -5,7 +5,7 @@ import { withCurrentLanguage } from './Languages'
 
 const LanguageFlag = ({ image, language, currentLanguage, changeLanguage }) => {
     const classes = classNames({selected: language === currentLanguage}, 'language-flag');
-    return <img src={image} className={classes} onClick={() => changeLanguage(language)}/>
+    return <img src={image} className={classes} alt={currentLanguage} onClick={() => changeLanguage(language)}/>
 };
 
 const Language = withCurrentLanguage(LanguageFlag);
