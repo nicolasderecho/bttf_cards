@@ -2,6 +2,22 @@ import React from 'react';
 import './PowerAction.scss';
 import classNames from 'classnames';
 import {POWER_ACTION} from "./GameCardTypes";
+import {SCIENCE_EXPERIMENT} from "../GameCardContents";
+
+const cardNote = (note) => {
+  if(!!note) {
+      return <div className={'card-note'}>({note})</div>
+  }
+};
+const scienceExperimentDescription = (card) => {
+    return <React.Fragment>
+        <div className={'card-connector'}>{card.connector}</div>
+        <div>{card.note}</div>
+    </React.Fragment>
+};
+
+
+const isScienceExperiment = (card) => card.id === SCIENCE_EXPERIMENT;
 
 const PowerAction = ({ className, card }) => {
     const classes = classNames(className, 'bttf-card', 'power-action');
@@ -15,6 +31,7 @@ const PowerAction = ({ className, card }) => {
             </div>
             <div className={'bttf-card-footer'}>
                 {card.description}
+                {isScienceExperiment(card) ? scienceExperimentDescription(card) : cardNote(card.note) }
             </div>
         </div>
     );

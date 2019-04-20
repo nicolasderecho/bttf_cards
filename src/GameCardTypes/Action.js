@@ -3,6 +3,11 @@ import './Action.scss';
 import classNames from 'classnames';
 import {ACTION} from "./GameCardTypes";
 
+const cardNote = (note) => {
+    if(!!note) {
+        return <div className={'card-note'}>({note})</div>
+    }
+};
 const Action = ({ className, card }) => {
     const classes = classNames(className, 'bttf-card', 'action');
     return (
@@ -15,6 +20,7 @@ const Action = ({ className, card }) => {
             </div>
             <div className={'bttf-card-footer'}>
                 {card.description}
+                {cardNote(card.note)}
             </div>
         </div>
     );
