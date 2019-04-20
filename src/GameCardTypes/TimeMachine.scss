@@ -12,6 +12,13 @@ $timeMachineWhite: #e8e9ee;
     background-color: $timeMachineLight;
     color: $timeMachineWhite;
     min-height: 270px;
+
+    .title-description {
+      font-weight: normal;
+      font-size: 0.8em;
+      text-align: right;
+    }
+
     .bttf-card-header {
       padding: 10px;
     }
