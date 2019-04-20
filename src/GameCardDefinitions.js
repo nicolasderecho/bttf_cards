@@ -65,7 +65,7 @@ export const GAME_CARDS = {
 
         //ACTION Cards
         [`${GULLIBLE_MCFLY}`]: { type: ACTION, id: GULLIBLE_MCFLY, title: 'No seas tan crédulo Mcfly!', description: 'Roba cualquier item que otro jugador tenga en la mesa y ponlo enfrente tuyo.', language: LANGUAGES.SPANISH },
-        [`${SLEEP_INDUCING_GENERATOR}`]: { type: ACTION, id: SLEEP_INDUCING_GENERATOR, title: 'Es un ritual rítmico generador de sueño!', description: 'Todos los jugadores excepto vos deben quedarse con 3 cartas en su mano, descartando el resto.', language: LANGUAGES.SPANISH },
+        [`${SLEEP_INDUCING_GENERATOR}`]: { type: ACTION, id: SLEEP_INDUCING_GENERATOR, title: 'Es un inductor de sueño generador de ritmo alfa!', description: 'Todos los jugadores excepto vos deben quedarse con 3 cartas en su mano, descartando el resto.', language: LANGUAGES.SPANISH },
         [`${TRADE_HANDS}`]: { type: ACTION, id: TRADE_HANDS, title: 'Intercambia tu mano', description: 'Intercambia tu mano entera de cartas con la mano de otro jugador(sin incluir la ID card).', language: LANGUAGES.SPANISH },
         [`${SAVE_CLOCK_TOWER}`]: { type: ACTION, id: SAVE_CLOCK_TOWER, title: 'Salven la torre del reloj!', description: 'Todos los jugadores deben elegir una carta de su mano y dártela.', language: LANGUAGES.SPANISH },
         [`${TIME_VORTEX}`]: { type: ACTION, id: TIME_VORTEX, title: 'Vórtice de tiempo' , description: 'Tomá las cartas de las manos de todos los jugadores(excepto las ID cards), mezclalas y repartilas de a 1, empezando por vos.', language: LANGUAGES.SPANISH },

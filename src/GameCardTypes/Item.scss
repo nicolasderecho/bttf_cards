@@ -23,6 +23,14 @@ $itemWhite: #fefdfb;
       background-color: $itemDark;
       color: $itemWhite;
       padding: 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+
+      .item-subtitle {
+        font-weight: normal;
+        font-size: 0.8em;
+      }
+
     }
 
     .bttf-card-footer {
