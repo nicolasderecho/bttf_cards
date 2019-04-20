@@ -34,7 +34,7 @@ class App extends Component {
         <LanguageContext.Provider value={this.state}>
             <div className="App">
                 <header className={"navbar app-header"}>
-                    <div className={'container'}>
+                    <div className={'container flags-container'}>
                         <div className={'navbar-brand'}>
                             <div className={'navbar-item language-item'}><Language image={flagUsa} language={LANGUAGES.ENGLISH} /></div>
                             <div className={'navbar-item language-item'}><Language image={flagArgentina} language={LANGUAGES.SPANISH} /></div>
