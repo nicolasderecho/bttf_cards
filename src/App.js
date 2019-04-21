@@ -21,7 +21,7 @@ class App extends Component {
 
   renderGameCard = (card) => {
       const GameCard = gameCardFor(card);
-      return <div className={'column is-one-fifth-desktop is-one-quarter-tablet'} key={card.id}>
+      return <div className={'column is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd'} key={card.id}>
           <GameCard card={card}/>
       </div>
   };

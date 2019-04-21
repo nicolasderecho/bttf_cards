@@ -30,6 +30,20 @@ body {
   padding: 0 20px;
 }
 
-.bttf-card .card-note {
-  margin-top: 5px;
+.bttf-card {
+
+  min-height: 360px;
+
+  .card-note {
+    margin-top: 5px;
+  }
+
+  .bttf-card-body {
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
 }
