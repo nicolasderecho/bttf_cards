@@ -5,10 +5,6 @@ $actionWhite: #e7f0ed;
 
 .bttf-card {
 
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   &.action {
     background-color: $actionLight;
     color: $actionBlack;

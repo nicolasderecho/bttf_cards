@@ -32,6 +32,10 @@ body {
 
 .bttf-card {
 
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   min-height: 360px;
 
   .card-note {

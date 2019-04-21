@@ -5,32 +5,15 @@ $powerActionWhite: #ffe3f7;
 
 .bttf-card {
 
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   &.power-action {
     background-color: $powerActionLight;
     color: $powerActionBlack;
-    .bttf-card-header {
-      padding: 10px;
-    }
 
     .bttf-card-body {
       border-top: 2px solid $powerActionWhite;
       border-bottom: 2px solid $powerActionWhite;
       background-color: $powerActionDark;
       color: $powerActionWhite;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .bttf-card-footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
     }
 
     .card-connector {

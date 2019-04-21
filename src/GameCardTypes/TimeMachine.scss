@@ -4,22 +4,14 @@ $timeMachineWhite: #e8e9ee;
 
 .bttf-card {
 
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
   &.time-machine {
     background-color: $timeMachineLight;
     color: $timeMachineWhite;
 
     .title-description {
       font-weight: normal;
-      font-size: 0.8em;
+      font-size: 0.85em;
       text-align: right;
-    }
-
-    .bttf-card-header {
-      padding: 10px;
     }
 
     .bttf-card-body {
@@ -27,17 +19,7 @@ $timeMachineWhite: #e8e9ee;
       border-bottom: 2px solid $timeMachineWhite;
       background-color: $timeMachineDark;
       color: $timeMachineWhite;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 1.1em;
       text-align: left;
-    }
-
-    .bttf-card-footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
     }
 
   }
