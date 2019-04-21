@@ -13,8 +13,9 @@ $actionWhite: #e7f0ed;
     background-color: $actionLight;
     color: $actionBlack;
 
-    .bttf-card-header {
-      padding: 10px;
+    .discontinuity .bttf-card-body span {
+      transform: rotateZ(-15deg) translateY(-3px);
+      font-size: 1.3em;
     }
 
     .bttf-card-body {
@@ -22,16 +23,6 @@ $actionWhite: #e7f0ed;
       border-bottom: 2px solid $actionWhite;
       background-color: $actionDark;
       color: $actionWhite;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .bttf-card-footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
     }
 
   }
