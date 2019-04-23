@@ -9,9 +9,9 @@ $actionWhite: #e7f0ed;
     background-color: $actionLight;
     color: $actionBlack;
 
-    .discontinuity .bttf-card-body span {
+    &.discontinuity .bttf-card-body span {
       transform: rotateZ(-15deg) translateY(-3px);
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
 
     .bttf-card-body {
