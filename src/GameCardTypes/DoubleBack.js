@@ -1,5 +1,4 @@
 import React from 'react';
-import './DoubleBack.scss';
 import classNames from 'classnames';
 import {DOUBLE_BACK} from "./GameCardTypes";
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './TimeMachine.scss';
 import classNames from 'classnames';
 import {TIME_MACHINE} from "./GameCardTypes";
 import {LANGUAGES, withCurrentLanguage} from "../Languages";

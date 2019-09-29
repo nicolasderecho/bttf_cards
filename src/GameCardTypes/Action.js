@@ -1,5 +1,4 @@
 import React from 'react';
-import './Action.scss';
 import classNames from 'classnames';
 import {ACTION} from "./GameCardTypes";
 import {DISCONTINUITY} from "../GameCardContents";

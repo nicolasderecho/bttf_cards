@@ -1,5 +1,4 @@
 import React from 'react';
-import './PowerAction.scss';
 import classNames from 'classnames';
 import {POWER_ACTION} from "./GameCardTypes";
 import {SCIENCE_EXPERIMENT} from "../GameCardContents";

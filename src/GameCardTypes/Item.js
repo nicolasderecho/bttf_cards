@@ -1,5 +1,4 @@
 import React from 'react';
-import './Item.scss';
 import classNames from 'classnames';
 import {ITEM} from "./GameCardTypes";
 
