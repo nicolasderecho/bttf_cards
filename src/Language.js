@@ -1,5 +1,4 @@
 import React from 'react';
-import './Language.scss';
 import classNames from 'classnames';
 import { withCurrentLanguage } from './Languages'
 

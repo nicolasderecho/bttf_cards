@@ -1,6 +1,5 @@
 import React from 'react';
 import {EnglishFAQ} from "./EnglishFAQ";
-import './FAQ.scss'
 import logo from './assets/cardgamelogo.png';
 
 const FAQ = () => {
