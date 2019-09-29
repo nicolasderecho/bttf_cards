@@ -35,7 +35,7 @@ export const GAME_CARDS = {
         [`${TIME_MACHINE_V5}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V5, title: 'Time car V5', requires: 'locomotion', description: 'This card does nothing unless you also have an overpowered locomotive on the table', language: LANGUAGES.ENGLISH },
         [`${TIME_MACHINE_V6}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V6, title: 'Time car V6', subtitle: 'fully-equipped', description: 'play an extra card after you play this card.', language: LANGUAGES.ENGLISH },
 
-        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'First, flip the A-3 linchpin to whichever side you prefer', secondAction: 'Second, if you have the METAL PIE PAN on the table in front of you, then you may discard it to flip any other linchpin.', language: LANGUAGES.ENGLISH },
+        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'First, flip the A-3 linchpin as you wish', secondAction: 'Second, if you have the METAL PIE PAN on the table in front of you, then you may discard it to flip any other linchpin.', language: LANGUAGES.ENGLISH },
 
         [`${OVERLOCOMOTIVE}`]: { type: ITEM, id: OVERLOCOMOTIVE, title: 'Overpowered locomotive', description: 'Discard this after using to activate the V5 time car', language: LANGUAGES.ENGLISH },
         [`${TOMORROW_NEWSPAPER}`]: { type: ITEM, id: TOMORROW_NEWSPAPER, title: 'Tomorrow\'s newspaper', description: 'If you have this on the table, you may discard it at any time to cancel another player\'s card', language: LANGUAGES.ENGLISH },
@@ -84,7 +84,7 @@ export const GAME_CARDS = {
         [`${TIME_MACHINE_V5}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V5, title: 'Delorean V5', requires: 'la locomotora', description: 'Esta carta no hace nada a menos que también tengas una locomotora en la mesa.', language: LANGUAGES.SPANISH },
         [`${TIME_MACHINE_V6}`]: { type: TIME_MACHINE, id: TIME_MACHINE_V6, title: 'Tren máquina del tiempo', subtitle: 'totalmente equipado', description: 'juega una carta extra luego de jugar esta carta.', language: LANGUAGES.SPANISH },
 
-        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'Primero, voltea el linchpin A-3 a la posición que quieras', secondAction: 'Luego, si tenes el item METAL PIE PAN en la mesa enfrente tuyo, podrías descartarlo para voltear cualquier otro linchpin.', language: LANGUAGES.SPANISH },
+        [`${DOUBLE_BACK_A3}`]: { type: DOUBLE_BACK, id: DOUBLE_BACK_A3, firstAction: 'Primero, voltea el linchpin A-3 como quieras', secondAction: 'Luego, si tenes el item METAL PIE PAN en la mesa enfrente tuyo, podrías descartarlo para voltear cualquier otro linchpin.', language: LANGUAGES.SPANISH },
 
         [`${OVERLOCOMOTIVE}`]: { type: ITEM, id: OVERLOCOMOTIVE, title: 'Locomotora', description: 'Descartala luego de usarla para activar el delorean V5', language: LANGUAGES.SPANISH },
         [`${TOMORROW_NEWSPAPER}`]: { type: ITEM, id: TOMORROW_NEWSPAPER, title: 'Diario de mañana', description: 'Si tenés esto en la mesa, podés descartarlo en cualquier momento para anular la carta de otro jugador.', language: LANGUAGES.SPANISH },
