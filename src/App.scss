@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   text-align: center;
   min-height: 360px;
+  height: 100%;
 
   .card-note {
     margin-top: 5px;
@@ -59,6 +60,7 @@ body {
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    padding: 1em;
   }
 
 }

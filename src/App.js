@@ -22,7 +22,7 @@ class App extends Component {
 
   renderGameCard = (card) => {
       const GameCard = gameCardFor(card);
-      return <Column tabletColumnSize={'one-third'} desktopColumnSize={'one-quarter'} widescreenColumnSize={'one-quarter'} fullhdColumnSize={'one-fifth'} key={card.id}>
+      return <Column tabletColumnSize={'one-third'} desktopColumnSize={'one-quarter'} widescreenColumnSize={'one-fifth'} fullhdColumnSize={'2'} key={card.id}>
           <GameCard card={card}/>
       </Column>
   };
@@ -35,7 +35,7 @@ class App extends Component {
         <LanguageContext.Provider value={this.state}>
             <div className="App">
                 <Navbar className={"app-header"}>
-                    <Container className={'flags-container'}>
+                    <Container fluid className={'flags-container'}>
                         <Navbar.Brand>
                             <Navbar.Item className={'language-item'}><Language image={flagUsa} language={LANGUAGES.ENGLISH} /></Navbar.Item>
                             <Navbar.Item className={'language-item'}><Language image={flagArgentina} language={LANGUAGES.SPANISH} /></Navbar.Item>
@@ -43,7 +43,7 @@ class App extends Component {
                     </Container>
                 </Navbar>
                 <div className={'header-cover'} />
-                <Container className={'app-body'}>
+                <Container fluid className={'app-body'}>
                     <Columns multiline>
                         { cards.map(renderGameCard) }
                     </Columns>
