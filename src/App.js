@@ -5,6 +5,7 @@ import Language from "./Language";
 import { LANGUAGES, LanguageContext } from './Languages';
 import {englishGameCards, spanishGameCards} from "./GameCardDefinitions";
 import {gameCardFor} from "./GameCards";
+import {Column, Columns, Container, Navbar} from "tenpines-bulma-react";
 
 class App extends Component {
   constructor(props) {
@@ -21,9 +22,9 @@ class App extends Component {
 
   renderGameCard = (card) => {
       const GameCard = gameCardFor(card);
-      return <div className={'column is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd'} key={card.id}>
+      return <Column tabletColumnSize={'one-third'} desktopColumnSize={'one-quarter'} widescreenColumnSize={'one-quarter'} fullhdColumnSize={'one-fifth'} key={card.id}>
           <GameCard card={card}/>
-      </div>
+      </Column>
   };
 
   render() {
@@ -33,20 +34,20 @@ class App extends Component {
     return (
         <LanguageContext.Provider value={this.state}>
             <div className="App">
-                <header className={"navbar app-header"}>
-                    <div className={'container flags-container'}>
-                        <div className={'navbar-brand'}>
-                            <div className={'navbar-item language-item'}><Language image={flagUsa} language={LANGUAGES.ENGLISH} /></div>
-                            <div className={'navbar-item language-item'}><Language image={flagArgentina} language={LANGUAGES.SPANISH} /></div>
-                        </div>
-                    </div>
-                </header>
-                <div className={'header-cover'}></div>
-                <div className={'container app-body'}>
-                    <div className={'columns is-multiline'}>
+                <Navbar className={"app-header"}>
+                    <Container className={'flags-container'}>
+                        <Navbar.Brand>
+                            <Navbar.Item className={'language-item'}><Language image={flagUsa} language={LANGUAGES.ENGLISH} /></Navbar.Item>
+                            <Navbar.Item className={'language-item'}><Language image={flagArgentina} language={LANGUAGES.SPANISH} /></Navbar.Item>
+                        </Navbar.Brand>
+                    </Container>
+                </Navbar>
+                <div className={'header-cover'} />
+                <Container className={'app-body'}>
+                    <Columns multiline>
                         { cards.map(renderGameCard) }
-                    </div>
-                </div>
+                    </Columns>
+                </Container>
             </div>
         </LanguageContext.Provider>
     );
